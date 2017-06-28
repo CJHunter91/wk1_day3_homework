@@ -96,19 +96,29 @@ users = {
 }
 
 # 1. Return Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
-
+users["Jonathan"][:twitter]
 # 2. Return Erik's hometown
-
+users["Erik"][:home_town]
 # 3. Return the array of Erik's favorite numbers
-
+users["Erik"][:favourite_numbers]
 # 4. Return the type of Avril's pet Colin
-
+users["Avril"][:pets]["colin"]
 # 5. Return the smallest of Erik's favorite numbers
-
+users["Erik"][:favourite_numbers].min
 # 6. Add the number `7` to Erik's favorite numbers
+users["Erik"][:favourite_numbers].push(7)
 
 # 7. Change Erik's hometown to Edinburgh
-
+users["Erik"][:home_town] = "Edinburgh"
 # 8. Add a pet dog to Erik called "Fluffy"
+users["Erik"][:pets]["Fluffy"] = :dog
 
 # 9. Add yourself to the users hash
+users["Chris"] = {
+      :facebook=> "Chris Hunter",
+      :favourite_numbers => [42, 25, 1991, 1994],
+      :home_town => "Glenrothes",
+      :pets => {
+        "Kitkat" => :cat
+        }
+}
