@@ -38,13 +38,15 @@ lines = ['Gyle Centre', 'Edinburgh Park', 'Murrayfield Stadium', 'Haymarket', 'P
 
 
 # 6. Add 'York Place' to the end of the array
-lines.push('York Place')
+# lines.push('York Place')
 # 7. Remove 'Edinburgh Park' from the array using it's name
+# lines.delete('Edinburgh Park')
 
 # 8. Delete 'Edinburgh Park' from the array by index
-
+lines.delete_at(1)
+puts lines
 # 9. Reverse the positions of the stops in the array
-
+lines.reverse
 ### B. Given the following data structure:
 
 my_hash = {"0" => "Zero", 1 => "One", :two => "Two", "two" => 2}
