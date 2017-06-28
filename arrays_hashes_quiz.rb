@@ -8,19 +8,24 @@ puts lines.length()
 # 2. Return 'Edinburgh Park' from the array
 def find_stop(lines)
   for stop in lines do 
-    puts "run"
-    if stop == "Edinburgh Park"
+    if (stop == "Edinburgh Park")
       return stop
     end
   end
 end
-puts find_stop(lines)
-# 3. How many ways can we return 'Princes Street' from the array?
+puts find_stop(lines) 
 
-# 4. Work out the index position of 'Haymarket'
+puts lines[1]
+# # 3. How many ways can we return 'Princes Street' from the array?
+# # In this order
+puts lines[-1]
+puts lines.pop() 
 
-# 5. Add 'Airport' to the start of the array
+# # 4. Work out the index position of 'Haymarket'
 
+# # 5. Add 'Airport' to the start of the array
+# lines.push('Airport')
+# puts lines
 # 6. Add 'York Place' to the end of the array
 
 # 7. Remove 'Edinburgh Park' from the array using it's name
