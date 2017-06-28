@@ -3,50 +3,52 @@
 lines = ['Gyle Centre', 'Edinburgh Park', 'Murrayfield Stadium', 'Haymarket', 'Princes Street']
 
 # 1. Work out how many stops there are in the array
-# puts lines.length()
+puts lines.length()
 
-# # 2. Return 'Edinburgh Park' from the array
-# def find_stop(lines)
-#   for stop in lines do 
-#     if (stop == "Edinburgh Park")
-#       return stop
-#     end
-#   end
-# end
-# puts find_stop(lines) 
+# 2. Return 'Edinburgh Park' from the array
+def find_stop(lines)
+  for stop in lines do 
+    if (stop == "Edinburgh Park")
+      return stop
+    end
+  end
+end
+puts find_stop(lines) 
+# or you can use
+puts lines[1]
+puts lines[-4]
 
-# puts lines[1]
-# # # 3. How many ways can we return 'Princes Street' from the array?
-# # # In this order
-# puts lines[4]
-# puts lines[-1]
-# puts lines.pop() 
+# # 3. How many ways can we return 'Princes Street' from the array?
+# # In this order
+puts lines[4]
+puts lines[-1]
+puts lines.pop() 
 
-# # 4. Work out the index position of 'Haymarket'
-# count = 0
-# for stop in lines do
-#   if stop == 'Haymarket'
-#     puts count
-#   end
-#   count += 1
-# end
+# 4. Work out the index position of 'Haymarket'
+count = 0
+for stop in lines do
+  if stop == 'Haymarket'
+    puts count
+  end
+  count += 1
+end
+#or you could use
+lines.index('Haymarket')
+# 5. Add 'Airport' to the start of the array
+lines.unshift('Airport')
 
-
-# # 5. Add 'Airport' to the start of the array
-# lines.shift('Airport')
-#
 
 
 # 6. Add 'York Place' to the end of the array
-# lines.push('York Place')
+lines.push('York Place')
 # 7. Remove 'Edinburgh Park' from the array using it's name
-# lines.delete('Edinburgh Park')
+lines.delete('Edinburgh Park')
 
-# # 8. Delete 'Edinburgh Park' from the array by index
-# lines.delete_at(1)
-# # 9. Reverse the positions of the stops in the array
-# lines.reverse
-### B. Given the following data structure:
+# 8. Delete 'Edinburgh Park' from the array by index
+lines.delete_at(1)
+# 9. Reverse the positions of the stops in the array
+lines.reverse
+## B. Given the following data structure:
 
 my_hash = {"0" => "Zero", 1 => "One", :two => "Two", "two" => 2}
 
