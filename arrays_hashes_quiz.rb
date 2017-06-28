@@ -6,7 +6,15 @@ lines = ['Gyle Centre', 'Edinburgh Park', 'Murrayfield Stadium', 'Haymarket', 'P
 puts lines.length()
 
 # 2. Return 'Edinburgh Park' from the array
-
+def find_stop(lines)
+  for stop in lines do 
+    puts "run"
+    if stop == "Edinburgh Park"
+      return stop
+    end
+  end
+end
+puts find_stop(lines)
 # 3. How many ways can we return 'Princes Street' from the array?
 
 # 4. Work out the index position of 'Haymarket'
