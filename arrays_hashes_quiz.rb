@@ -23,7 +23,8 @@ puts lines[-4]
 puts lines[4]
 puts lines[-1]
 puts lines.pop() 
-
+puts lines.last()
+puts lines.at(4)
 # 4. Work out the index position of 'Haymarket'
 count = 0
 for stop in lines do
@@ -36,13 +37,17 @@ end
 lines.index('Haymarket')
 # 5. Add 'Airport' to the start of the array
 lines.unshift('Airport')
-
+lines.insert(0, 'Airport')
+lines = ['Airport'] + lines
 
 
 # 6. Add 'York Place' to the end of the array
 lines.push('York Place')
+lines += ['York Place']
+lines.insert(-1, 'York Place')
 # 7. Remove 'Edinburgh Park' from the array using it's name
 lines.delete('Edinburgh Park')
+lines.delete_if{ |line| line == "Edinburgh Park"}
 
 # 8. Delete 'Edinburgh Park' from the array by index
 lines.delete_at(1)
@@ -107,8 +112,12 @@ users["Erik"][:favourite_numbers]
 users["Avril"][:pets]["colin"]
 # 5. Return the smallest of Erik's favorite numbers
 users["Erik"][:favourite_numbers].min
+users["Erik"][:favourite_numbers].sort.first
 # 6. Add the number `7` to Erik's favorite numbers
+
 users["Erik"][:favourite_numbers].push(7)
+users["Erik"][:favourite_numbers] << 7
+
 
 # 7. Change Erik's hometown to Edinburgh
 users["Erik"][:home_town] = "Edinburgh"
@@ -124,3 +133,11 @@ users["Chris"] = {
         "Kitkat" => :cat
         }
 }
+users.store("Chris", {
+      :facebook=> "Chris Hunter",
+      :favourite_numbers => [42, 25, 1991, 1994],
+      :home_town => "Glenrothes",
+      :pets => {
+        "Kitkat" => :cat
+        }
+      })
